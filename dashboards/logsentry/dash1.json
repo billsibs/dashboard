@@ -1,0 +1,324 @@
+{
+	"meta": {
+		"chronografVersion": "1.6.1",
+		"sources": {
+			"1": {
+				"name": "Influx 1",
+				"link": "/chronograf/v1/sources/1"
+			}
+		}
+	},
+	"dashboard": {
+		"id": 1,
+		"cells": [
+			{
+				"i": "5f2e4a45-15aa-4ce4-bbac-9050c41a40a6",
+				"x": 0,
+				"y": 0,
+				"w": 4,
+				"h": 4,
+				"name": "Untitled Graph",
+				"queries": [
+					{
+						"query": "SELECT mean(\"esxi-cpuload1\") AS \"mean_esxi-cpuload1\", mean(\"esxi-cpuload2\") AS \"mean_esxi-cpuload2\" FROM \"telegraf\".\"autogen\".\"system\" WHERE time > :dashboardTime: AND \"agent_host\"='10.82.5.166' GROUP BY time(:interval:) FILL(null)",
+						"queryConfig": {
+							"database": "telegraf",
+							"measurement": "system",
+							"retentionPolicy": "autogen",
+							"fields": [
+								{
+									"value": "mean",
+									"type": "func",
+									"alias": "mean_esxi-cpuload1",
+									"args": [
+										{
+											"value": "esxi-cpuload1",
+											"type": "field",
+											"alias": ""
+										}
+									]
+								},
+								{
+									"value": "mean",
+									"type": "func",
+									"alias": "mean_esxi-cpuload2",
+									"args": [
+										{
+											"value": "esxi-cpuload2",
+											"type": "field",
+											"alias": ""
+										}
+									]
+								}
+							],
+							"tags": {
+								"agent_host": [
+									"10.82.5.166"
+								]
+							},
+							"groupBy": {
+								"time": "auto",
+								"tags": []
+							},
+							"areTagsAccepted": true,
+							"fill": "null",
+							"rawText": null,
+							"range": null,
+							"shifts": null
+						},
+						"source": "/chronograf/v1/sources/1"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "line",
+				"colors": [
+					{
+						"id": "dbfb73ce-a0cb-4680-b2e4-2fd24bb470e6",
+						"type": "scale",
+						"hex": "#31C0F6",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "86727903-e448-4275-9977-478c876d9a32",
+						"type": "scale",
+						"hex": "#A500A5",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "719eb31d-2b92-44e9-9486-5a78e55d7f26",
+						"type": "scale",
+						"hex": "#FF7E27",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 2
+				},
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/cells/5f2e4a45-15aa-4ce4-bbac-9050c41a40a6"
+				}
+			},
+			{
+				"i": "45d8a4e8-9e75-46fd-a5ff-c4637c7f2b52",
+				"x": 4,
+				"y": 0,
+				"w": 4,
+				"h": 4,
+				"name": "Untitled Graph",
+				"queries": [
+					{
+						"query": "SELECT mean(\"esxi-uptime\") AS \"mean_esxi-uptime\" FROM \"telegraf\".\"autogen\".\"system\" WHERE time > :dashboardTime: AND \"agent_host\"='10.82.5.166' GROUP BY time(:interval:) FILL(null)",
+						"queryConfig": {
+							"database": "telegraf",
+							"measurement": "system",
+							"retentionPolicy": "autogen",
+							"fields": [
+								{
+									"value": "mean",
+									"type": "func",
+									"alias": "mean_esxi-uptime",
+									"args": [
+										{
+											"value": "esxi-uptime",
+											"type": "field",
+											"alias": ""
+										}
+									]
+								}
+							],
+							"tags": {
+								"agent_host": [
+									"10.82.5.166"
+								]
+							},
+							"groupBy": {
+								"time": "auto",
+								"tags": []
+							},
+							"areTagsAccepted": true,
+							"fill": "null",
+							"rawText": null,
+							"range": null,
+							"shifts": null
+						},
+						"source": "/chronograf/v1/sources/1"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "line",
+				"colors": [
+					{
+						"id": "dbfb73ce-a0cb-4680-b2e4-2fd24bb470e6",
+						"type": "scale",
+						"hex": "#31C0F6",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "86727903-e448-4275-9977-478c876d9a32",
+						"type": "scale",
+						"hex": "#A500A5",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "719eb31d-2b92-44e9-9486-5a78e55d7f26",
+						"type": "scale",
+						"hex": "#FF7E27",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 2
+				},
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/cells/45d8a4e8-9e75-46fd-a5ff-c4637c7f2b52"
+				}
+			}
+		],
+		"templates": [
+			{
+				"tempVar": ":Test:",
+				"values": [
+					{
+						"value": "hostname",
+						"type": "tagKey",
+						"selected": true
+					}
+				],
+				"id": "2cf76b45-2349-4d84-9a2a-f1a908220714",
+				"type": "tagKeys",
+				"label": "",
+				"query": {
+					"influxql": "SHOW TAG KEYS ON :database: FROM :measurement:",
+					"db": "_internal",
+					"measurement": "database",
+					"tagKey": "",
+					"fieldKey": ""
+				},
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/templates/2cf76b45-2349-4d84-9a2a-f1a908220714"
+				}
+			}
+		],
+		"name": "ESXi Monitor",
+		"organization": "default",
+		"links": {
+			"self": "/chronograf/v1/dashboards/1",
+			"cells": "/chronograf/v1/dashboards/1/cells",
+			"templates": "/chronograf/v1/dashboards/1/templates"
+		}
+	}
+}
